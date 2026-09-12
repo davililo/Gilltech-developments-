@@ -106,8 +106,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .price-card .tag { position: absolute; top: 20px; right: 20px; padding: 5px 9px; color: var(--navy-950); border-radius: 4px; background: var(--cyan); font-size: .68rem; font-weight: 900; letter-spacing: .05em; text-transform: uppercase; }
 .price-card h3 { margin: 0 0 11px; font: 700 1.25rem var(--display); }
 .price { margin: 0 0 23px; font: 700 clamp(2.2rem, 4vw, 3.3rem)/1 var(--display); letter-spacing: -.055em; }
-.price small { color: var(--muted); font: 600 .9rem var(--body); letter-spacing: 0; }
-.featured .price small, .featured .price-card-copy { color: rgba(255,255,255,.65); }
+.price small { display: inline-block; margin-left: 7px; padding: 6px 9px; color: #087a3f; border: 1px solid #8be0b4; border-radius: 6px; background: #e9fff2; font: 800 .72rem var(--body); letter-spacing: .03em; text-transform: uppercase; vertical-align: middle; }
+.featured .price small { color: #073d25; border-color: #79e2aa; background: #a9f3c6; }
+.featured .price-card-copy { color: rgba(255,255,255,.65); }
 .price-card-copy { min-height: 96px; margin: 0 0 25px; color: var(--muted); font-size: .92rem; }
 .price-list { display: grid; gap: 12px; margin: 0 0 30px; padding: 22px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); list-style: none; font-size: .88rem; }
 .featured .price-list { border-color: rgba(255,255,255,.16); }
@@ -149,6 +150,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .contact-detail { display: flex; gap: 14px; align-items: center; }
 .contact-detail-icon { display: grid; width: 42px; height: 42px; flex: 0 0 auto; place-items: center; color: var(--blue); border: 1px solid var(--line); border-radius: 10px; background: var(--paper); }
 .contact-detail-icon svg { width: 21px; height: 21px; fill: currentColor; }
+.contact-detail-icon.whatsapp-image { color: transparent; border-color: #8be0b4; background: url('watermarked_img_3745967122321620394.jpg') center/cover; }
+.contact-detail-icon.whatsapp-image svg { display: none; }
 .contact-detail span { display: block; color: var(--muted); font-size: .78rem; }
 .contact-detail strong { display: block; font-size: .93rem; }
 .form-card { padding: 34px; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
@@ -181,6 +184,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .socials a:hover, .social-link:hover { color: var(--navy-950); background: var(--cyan); border-color: var(--cyan); }
 .social-link svg, .whatsapp-float svg { width: 18px; height: 18px; display: block; fill: currentColor; }
 .whatsapp-float svg { width: 24px; height: 24px; }
+.social-link[aria-label="WhatsApp"], .whatsapp-float { background-image: url('watermarked_img_3745967122321620394.jpg'); background-position: center; background-size: cover; }
+.social-link[aria-label="WhatsApp"] svg, .whatsapp-float svg { display: none; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.12); font-size: .78rem; }
 .legal-links { display: flex; gap: 18px; }
 .whatsapp-float { position: fixed; z-index: 30; right: 22px; bottom: 22px; display: grid; width: 54px; height: 54px; place-items: center; color: var(--white); border: 3px solid var(--white); border-radius: 50%; background: #19bb64; box-shadow: 0 10px 24px rgba(0,0,0,.2); font-size: 1.4rem; transition: transform .25s ease; }
