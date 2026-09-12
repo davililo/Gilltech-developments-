@@ -63,7 +63,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero { position: relative; min-height: 740px; display: flex; align-items: center; overflow: hidden; color: var(--white); background: var(--navy-950); }
 .hero::before { position: absolute; inset: 0; content: ''; background: linear-gradient(90deg, rgba(6,19,38,.96) 0%, rgba(6,19,38,.82) 42%, rgba(6,19,38,.5) 100%), url('markus-spiske-MI9-PY5cyNs-unsplash.jpg'); background-position: center; background-size: cover; }
 .hero::after { position: absolute; width: 600px; height: 600px; right: -210px; top: 100px; content: ''; border: 1px solid rgba(33,212,253,.16); border-radius: 50%; box-shadow: 0 0 0 50px rgba(33,212,253,.03), 0 0 0 100px rgba(33,212,253,.025); animation: float-ring 12s ease-in-out infinite; }
-.hero-content { position: relative; z-index: 1; padding: 130px 0 90px; }
+.hero-content { position: relative; z-index: 1; padding: 1px 0 90px; }
 .hero h1 { max-width: 780px; margin: 0 0 24px; font-size: clamp(3.2rem, 7vw, 6.5rem); line-height: .95; }
 .hero h1 em { color: var(--cyan); font-style: normal; }
 .hero-copy { max-width: 570px; margin: 0 0 34px; color: rgba(255,255,255,.73); font-size: 1.12rem; }
@@ -74,7 +74,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .page-hero h1 { max-width: 760px; margin: 0 0 18px; font-size: clamp(2.8rem, 6vw, 5.5rem); }
 .page-hero p { max-width: 610px; margin: 0; color: rgba(255,255,255,.68); font-size: 1.1rem; }
 
-.trust-strip { border-bottom: 1px solid var(--line); background: var(--white); }
+.trust-strip { background: var(--white); }
 .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
 .trust-item { display: flex; min-height: 110px; align-items: center; gap: 13px; padding: 20px 23px; border-right: 1px solid var(--line); }
 .trust-item:first-child { border-left: 1px solid var(--line); }
@@ -215,7 +215,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .site-header .brand-logo { width: 58px; }
   .site-header .home-logo { width: 34px; }
   .hero { min-height: 700px; }
-  .hero-content { padding: 120px 0 65px; }
+  .hero-content { padding: 1px 0 65px; }
   .hero h1 { font-size: clamp(2.8rem, 14vw, 4.2rem); }
   .hero-copy { font-size: 1rem; }
   .hero-note { gap: 17px; margin-top: 46px; }
