@@ -47,7 +47,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .nav { display: flex; height: 88px; align-items: center; justify-content: space-between; gap: 28px; }
 .brand { display: inline-flex; align-items: center; gap: 11px; font: 800 1.05rem var(--display); letter-spacing: .02em; white-space: nowrap; }
 .brand-mark { display: grid; width: 34px; height: 34px; place-items: center; color: var(--navy-950); background: var(--cyan); border-radius: 9px; font-size: .9rem; }
-.brand-logo { display: block; width: 150px; height: auto; padding: 7px 10px; border-radius: 6px; background: #000; filter: drop-shadow(0 8px 15px rgba(0,0,0,.14)); }
+.brand-logo { display: block; width: 150px; height: auto; padding: 0; border-radius: 0; background: transparent; filter: drop-shadow(0 8px 15px rgba(0,0,0,.14)); }
 .brand-logo-small { width: 120px; }
 .brand-wordmark { display: inline-block; color: var(--white); font: 700 1rem var(--display); letter-spacing: -.02em; }
 .nav-links { display: flex; align-items: center; gap: 26px; color: rgba(255,255,255,.78); font-size: .92rem; font-weight: 700; }
