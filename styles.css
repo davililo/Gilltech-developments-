@@ -48,6 +48,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .brand { display: inline-flex; align-items: center; gap: 11px; font: 800 1.05rem var(--display); letter-spacing: .02em; white-space: nowrap; }
 .brand-mark { display: grid; width: 34px; height: 34px; place-items: center; color: var(--navy-950); background: var(--cyan); border-radius: 9px; font-size: .9rem; }
 .brand-logo { display: block; width: 150px; height: auto; padding: 0; border-radius: 0; background: transparent; filter: drop-shadow(0 8px 15px rgba(0,0,0,.14)); }
+.site-header .brand-logo { width: 72px; }
 .brand-logo-small { width: 120px; }
 .brand-wordmark { display: inline-block; color: var(--white); font: 700 1rem var(--display); letter-spacing: -.02em; }
 .nav-links { display: flex; align-items: center; gap: 26px; color: rgba(255,255,255,.78); font-size: .92rem; font-weight: 700; }
@@ -150,8 +151,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .contact-detail { display: flex; gap: 14px; align-items: center; }
 .contact-detail-icon { display: grid; width: 42px; height: 42px; flex: 0 0 auto; place-items: center; color: var(--blue); border: 1px solid var(--line); border-radius: 10px; background: var(--paper); }
 .contact-detail-icon svg { width: 21px; height: 21px; fill: currentColor; }
-.contact-detail-icon.whatsapp-image { color: transparent; border-color: #8be0b4; background: url('watermarked_img_3745967122321620394.jpg') center/cover; }
-.contact-detail-icon.whatsapp-image svg { display: none; }
+.contact-detail-icon.whatsapp-image { color: #19bb64; border-color: #8be0b4; background: #effcf6; }
 .contact-detail span { display: block; color: var(--muted); font-size: .78rem; }
 .contact-detail strong { display: block; font-size: .93rem; }
 .form-card { padding: 34px; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
@@ -184,8 +184,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .socials a:hover, .social-link:hover { color: var(--navy-950); background: var(--cyan); border-color: var(--cyan); }
 .social-link svg, .whatsapp-float svg { width: 18px; height: 18px; display: block; fill: currentColor; }
 .whatsapp-float svg { width: 24px; height: 24px; }
-.social-link[aria-label="WhatsApp"], .whatsapp-float { background-image: url('watermarked_img_3745967122321620394.jpg'); background-position: center; background-size: cover; }
-.social-link[aria-label="WhatsApp"] svg, .whatsapp-float svg { display: none; }
+.social-link[aria-label="WhatsApp"] { color: #19bb64; border-color: #8be0b4; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.12); font-size: .78rem; }
 .legal-links { display: flex; gap: 18px; }
 .whatsapp-float { position: fixed; z-index: 30; right: 22px; bottom: 22px; display: grid; width: 54px; height: 54px; place-items: center; color: var(--white); border: 3px solid var(--white); border-radius: 50%; background: #19bb64; box-shadow: 0 10px 24px rgba(0,0,0,.2); font-size: 1.4rem; transition: transform .25s ease; }
@@ -211,6 +210,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .nav { height: 74px; }
   .brand { font-size: .9rem; }
   .brand-mark { width: 31px; height: 31px; }
+  .site-header .brand-logo { width: 58px; }
   .hero { min-height: 700px; }
   .hero-content { padding: 120px 0 65px; }
   .hero h1 { font-size: clamp(2.8rem, 14vw, 4.2rem); }
