@@ -50,6 +50,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .brand-logo { display: block; width: 150px; height: auto; padding: 0; border-radius: 0; background: transparent; filter: drop-shadow(0 8px 15px rgba(0,0,0,.14)); }
 .site-header .brand-logo { width: 72px; }
 .site-header .home-logo { width: 42px; }
+.site-header .home-brand { margin-top: 10px; }
 .brand-logo-small { width: 120px; }
 .brand-wordmark { display: inline-block; color: var(--white); font: 700 1rem var(--display); letter-spacing: -.02em; }
 .nav-links { display: flex; align-items: center; gap: 26px; color: rgba(255,255,255,.78); font-size: .92rem; font-weight: 700; }
