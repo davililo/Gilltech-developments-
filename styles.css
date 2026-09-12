@@ -49,6 +49,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .brand-mark { display: grid; width: 34px; height: 34px; place-items: center; color: var(--navy-950); background: var(--cyan); border-radius: 9px; font-size: .9rem; }
 .brand-logo { display: block; width: 150px; height: auto; padding: 0; border-radius: 0; background: transparent; filter: drop-shadow(0 8px 15px rgba(0,0,0,.14)); }
 .site-header .brand-logo { width: 72px; }
+.site-header .home-logo { width: 54px; }
 .brand-logo-small { width: 120px; }
 .brand-wordmark { display: inline-block; color: var(--white); font: 700 1rem var(--display); letter-spacing: -.02em; }
 .nav-links { display: flex; align-items: center; gap: 26px; color: rgba(255,255,255,.78); font-size: .92rem; font-weight: 700; }
@@ -211,6 +212,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .brand { font-size: .9rem; }
   .brand-mark { width: 31px; height: 31px; }
   .site-header .brand-logo { width: 58px; }
+  .site-header .home-logo { width: 44px; }
   .hero { min-height: 700px; }
   .hero-content { padding: 120px 0 65px; }
   .hero h1 { font-size: clamp(2.8rem, 14vw, 4.2rem); }
