@@ -54,7 +54,7 @@ if (bookingForm) {
     const message = formData.get('message');
     const whatsappText = `Hello Gill Tech Developments, my name is ${name}. I am interested in the ${service} package. Email: ${email}. Phone: ${phone}. Project details: ${message}`;
     const whatsappUrl = `https://wa.me/254743123507?text=${encodeURIComponent(whatsappText)}`;
-    const emailUrl = `mailto:hello@davidmgilltech.co.ke?subject=${encodeURIComponent('Project enquiry from ' + name)}&body=${encodeURIComponent(whatsappText)}`;
+    const emailUrl = `mailto:davililowebsites@gmail.com?subject=${encodeURIComponent('Project enquiry from ' + name)}&body=${encodeURIComponent(whatsappText)}`;
     const status = document.querySelector('#form-status');
     status.innerHTML = `Thanks, ${name}. Your request is ready to continue on <a href="${whatsappUrl}" target="_blank" rel="noopener">WhatsApp</a> or by <a href="${emailUrl}">email</a>.`;
     status.classList.add('visible');
@@ -76,12 +76,12 @@ const sendChoicePage = document.querySelector('#send-choice-page');
 if (sendChoicePage) {
   const params = new URLSearchParams(window.location.search);
   const name = params.get('name') || 'there';
-  const email = params.get('email') || 'hello@davidmgilltech.co.ke';
+  const email = params.get('email') || 'davililowebsites@gmail.com';
   const phone = params.get('phone') || '+254743123507';
   const service = params.get('service') || 'website package';
   const message = params.get('message') || 'I would like to start a project.';
   const whatsappText = `Hello Gill Tech Developments, my name is ${name}. I am interested in the ${service} package. Email: ${email}. Phone: ${phone}. Project details: ${message}`;
-  const emailUrl = `mailto:hello@davidmgilltech.co.ke?subject=${encodeURIComponent('Project enquiry from ' + name)}&body=${encodeURIComponent(whatsappText)}`;
+  const emailUrl = `mailto:davililowebsites@gmail.com?subject=${encodeURIComponent('Project enquiry from ' + name)}&body=${encodeURIComponent(whatsappText)}`;
   const whatsappUrl = `https://wa.me/254743123507?text=${encodeURIComponent(whatsappText)}`;
   const emailButton = document.querySelector('[data-send-email]');
   const whatsappButton = document.querySelector('[data-send-whatsapp]');
