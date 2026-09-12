@@ -47,7 +47,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .nav { display: flex; height: 88px; align-items: center; justify-content: space-between; gap: 28px; }
 .brand { display: inline-flex; align-items: center; gap: 11px; font: 800 1.05rem var(--display); letter-spacing: .02em; white-space: nowrap; }
 .brand-mark { display: grid; width: 34px; height: 34px; place-items: center; color: var(--navy-950); background: var(--cyan); border-radius: 9px; font-size: .9rem; }
-.brand-logo { display: block; width: 150px; height: auto; filter: drop-shadow(0 8px 15px rgba(0,0,0,.14)); }
+.brand-logo { display: block; width: 150px; height: auto; padding: 7px 10px; border-radius: 6px; background: #000; filter: drop-shadow(0 8px 15px rgba(0,0,0,.14)); }
 .brand-logo-small { width: 120px; }
 .brand-wordmark { display: inline-block; color: var(--white); font: 700 1rem var(--display); letter-spacing: -.02em; }
 .nav-links { display: flex; align-items: center; gap: 26px; color: rgba(255,255,255,.78); font-size: .92rem; font-weight: 700; }
@@ -118,10 +118,17 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .project-image { aspect-ratio: 16/10; display: grid; place-items: center; color: var(--white); background: var(--navy-900); overflow: hidden; }
 .project-image svg { width: 100%; height: 100%; }
+.building-process { position: relative; width: 100%; height: 100%; min-height: 210px; overflow: hidden; background: linear-gradient(180deg, #1b4f7a 0%, #63b8d0 67%, #d8a66b 67%, #b87942 100%); }
+.building-process::before { position: absolute; right: 12%; bottom: 22%; width: 42%; height: 55%; content: ''; background: repeating-linear-gradient(90deg, #f4d27c 0 18px, #fff1b8 18px 23px), repeating-linear-gradient(0deg, transparent 0 25px, rgba(8,26,50,.3) 25px 29px); border: 5px solid #081a32; box-shadow: 12px 0 0 #123451; animation: building-rise 5s ease-in-out infinite alternate; transform-origin: bottom; }
+.building-process::after { position: absolute; right: 6%; bottom: 77%; width: 2px; height: 78%; content: ''; background: #081a32; box-shadow: -44px 64px 0 -1px #081a32; transform: rotate(16deg); transform-origin: bottom; }
+.building-label { position: absolute; z-index: 1; top: 18px; left: 20px; color: var(--white); font: 700 1.05rem var(--display); letter-spacing: .02em; }
+.building-label::after { display: block; width: 42px; height: 3px; margin-top: 9px; content: ''; background: var(--cyan); animation: progress-line 2.4s ease-in-out infinite alternate; }
 .project-body { padding: 24px; }
 .project-meta { margin: 0 0 8px; color: var(--blue); font-size: .72rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
 .project-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
 .placeholder .project-image { background: linear-gradient(145deg, #0b2444, #1564a6); }
+@keyframes building-rise { from { transform: scaleY(.82); } to { transform: scaleY(1); } }
+@keyframes progress-line { from { width: 18px; } to { width: 86px; } }
 
 .value-grid { grid-template-columns: repeat(3, 1fr); }
 .value-card { padding: 28px; }
@@ -141,6 +148,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .contact-details { display: grid; gap: 16px; margin-top: 32px; }
 .contact-detail { display: flex; gap: 14px; align-items: center; }
 .contact-detail-icon { display: grid; width: 42px; height: 42px; flex: 0 0 auto; place-items: center; color: var(--blue); border: 1px solid var(--line); border-radius: 10px; background: var(--paper); }
+.contact-detail-icon svg { width: 21px; height: 21px; fill: currentColor; }
 .contact-detail span { display: block; color: var(--muted); font-size: .78rem; }
 .contact-detail strong { display: block; font-size: .93rem; }
 .form-card { padding: 34px; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
