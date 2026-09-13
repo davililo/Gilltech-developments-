@@ -241,8 +241,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .trust-item strong { font-size: .78rem; }
   .trust-item span { font-size: .68rem; }
   .split, .contact-layout, .cta-band .split { grid-template-columns: 1fr; }
-  .contact-info { grid-column: 1; grid-row: 1; }
-  .contact-layout .form-card { grid-column: 1; grid-row: 2; }
+  .contact-layout .form-card { grid-column: 1; grid-row: 1; }
+  .contact-info { grid-column: 1; grid-row: 2; }
   .visual-panel { min-height: 310px; }
   .service-grid, .pricing-grid, .portfolio-grid, .value-grid { grid-template-columns: 1fr; }
   .price-card-copy { min-height: 0; }
