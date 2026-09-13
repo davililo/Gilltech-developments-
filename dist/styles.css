@@ -213,11 +213,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .section { padding: 78px 0; }
   .section-sm { padding: 50px 0; }
   .nav { height: 74px; }
-  .homepage-header .nav { min-height: 112px; }
+  .homepage-header .nav { min-height: 100px; }
   .brand { font-size: .9rem; }
   .brand-mark { width: 31px; height: 31px; }
   .homepage-brand { flex-basis: 52px; }
-  .homepage-logo { width: 52px; height: 52px; margin: 30px 0; }
+  .homepage-logo { width: 52px; height: 52px; margin: 24px 0; }
   .hero { min-height: 700px; }
   .hero-content { padding: 1px 0 65px; }
   .hero h1 { font-size: clamp(2.8rem, 14vw, 4.2rem); }
