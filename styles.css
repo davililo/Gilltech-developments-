@@ -219,9 +219,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .brand-mark { width: 31px; height: 31px; }
   .site-header .brand-logo { width: 58px; }
   .homepage-brand { flex-basis: 52px; }
-  .homepage-logo { width: 52px; height: 52px; margin: 24px 0; }
+  .homepage-logo { width: 52px; height: 52px; margin: 24px 0; transform: translateY(-6px); }
   .hero { min-height: 700px; }
-  .hero-content { padding: 1px 0 65px; }
+  .hero-content { padding: 1px 0 65px; transform: translateY(16px); }
   .hero h1 { font-size: clamp(2.8rem, 14vw, 4.2rem); }
   .hero-copy { font-size: 1rem; }
   .hero-note { gap: 17px; margin-top: 46px; }
