@@ -48,8 +48,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .brand { display: inline-flex; align-items: center; gap: 11px; font: 800 1.05rem var(--display); letter-spacing: .02em; white-space: nowrap; }
 .brand-mark { display: grid; width: 34px; height: 34px; place-items: center; color: var(--navy-950); background: var(--cyan); border-radius: 9px; font-size: .9rem; }
 .brand-logo { display: block; width: 150px; height: auto; padding: 0; border-radius: 0; background: transparent; filter: drop-shadow(0 8px 15px rgba(0,0,0,.14)); }
+.homepage-logo { margin-bottom: 30px; }
 .brand-logo-small { width: 120px; }
 .brand-wordmark { display: inline-block; color: var(--white); font: 700 1rem var(--display); letter-spacing: -.02em; }
+.brand-wordmark { display: none; }
 .nav-links { display: flex; align-items: center; gap: 26px; color: rgba(255,255,255,.78); font-size: .92rem; font-weight: 700; }
 .nav-links a { transition: color .2s ease; }
 .nav-links a:hover, .nav-links a.active { color: var(--cyan); }
@@ -183,7 +185,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .socials a, .social-link { display: grid; width: 36px; height: 36px; place-items: center; color: var(--white); border: 1px solid rgba(255,255,255,.2); border-radius: 50%; font-size: .76rem; font-weight: 900; }
 .socials a:hover, .social-link:hover { color: var(--navy-950); background: var(--cyan); border-color: var(--cyan); }
 .social-link svg, .whatsapp-float svg { width: 18px; height: 18px; display: block; fill: currentColor; }
-.whatsapp-float svg { width: 24px; height: 24px; }
+.whatsapp-float::before { width: 24px; height: 24px; content: ''; background: url('assets/whatsapp.svg') center / contain no-repeat; filter: brightness(0) invert(1); }
+.whatsapp-float svg { display: none; width: 24px; height: 24px; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.12); font-size: .78rem; }
 .legal-links { display: flex; gap: 18px; }
 .whatsapp-float { position: fixed; z-index: 30; right: 22px; bottom: 22px; display: grid; width: 56px; height: 56px; place-items: center; color: var(--white); border: 3px solid var(--white); border-radius: 50%; background: #19bb64; box-shadow: 0 10px 24px rgba(0,0,0,.2); transition: transform .25s ease, box-shadow .25s ease; }
