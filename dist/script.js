@@ -89,3 +89,93 @@ if (sendChoicePage) {
   if (whatsappButton) whatsappButton.href = whatsappUrl;
 }
 
+(() => {
+  const tourStorageKey = 'gilltech-tour-seen';
+  const pageName = document.body.dataset.page || window.location.pathname.split('/').pop().replace('.html', '') || 'home';
+  const sharedSteps = [
+    { target: '.site-header', title: 'Find your way around', text: 'Use the navigation to explore the studio, services, portfolio and contact page.' },
+    { target: '.page-hero, .hero', title: 'Start with the big picture', text: 'This is the quickest overview of what Gill Tech Developments can help you build.' },
+    { target: '.btn-primary', title: 'Take the next step', text: 'Primary buttons lead you to the most useful action on each page.' }
+  ];
+  const pageSteps = {
+    home: [
+      { target: '.service-grid', title: 'Choose the right direction', text: 'Browse the service options and find the starting point that fits your project.' },
+      { target: '.cta-band', title: 'Ready to talk?', text: 'When you know what you need, book a conversation and share the details.' }
+    ],
+    services: [{ target: '.service-grid', title: 'Compare services', text: 'Review the packages, then use a booking button to start with your chosen service.' }],
+    portfolio: [{ target: '.portfolio-grid', title: 'See the work', text: 'Explore recent projects and open live examples where available.' }],
+    contact: [{ target: '#booking-form', title: 'Tell us about your project', text: 'Complete the short form and choose how you would like to continue.' }],
+    about: [{ target: '.value-grid, .split', title: 'Get to know the approach', text: 'Learn how the studio works and what guides each project.' }]
+  };
+
+  const steps = [...sharedSteps, ...(pageSteps[pageName] || [])]
+    .map((step) => ({ ...step, element: document.querySelector(step.target) }))
+    .filter((step) => step.element);
+  if (!steps.length) return;
+
+  const tour = document.createElement('div');
+  tour.className = 'site-tour';
+  tour.setAttribute('aria-live', 'polite');
+  tour.innerHTML = `<button class="tour-launch" type="button" aria-label="Open Website Guide" title="Website Guide">?</button>
+    <div class="tour-backdrop" hidden></div>
+    <section class="tour-card" role="dialog" aria-modal="true" aria-labelledby="tour-title" hidden>
+      <div class="tour-card-top"><span class="tour-progress"></span><button class="tour-close" type="button" aria-label="Close tour">&times;</button></div>
+      <h2 id="tour-title"></h2><p class="tour-text"></p>
+      <div class="tour-controls"><button class="tour-skip" type="button">Skip Tour</button><div><button class="tour-back" type="button">Back</button><button class="tour-next btn btn-primary btn-small" type="button">Next</button></div></div>
+    </section>`;
+  document.body.appendChild(tour);
+
+  const launch = tour.querySelector('.tour-launch');
+  const backdrop = tour.querySelector('.tour-backdrop');
+  const card = tour.querySelector('.tour-card');
+  const progress = tour.querySelector('.tour-progress');
+  const title = tour.querySelector('#tour-title');
+  const text = tour.querySelector('.tour-text');
+  const back = tour.querySelector('.tour-back');
+  const next = tour.querySelector('.tour-next');
+  let currentStep = 0;
+  let activeElement = null;
+
+  const finish = () => {
+    localStorage.setItem(tourStorageKey, 'true');
+    card.hidden = true;
+    backdrop.hidden = true;
+    document.body.classList.remove('tour-is-open');
+    if (activeElement) activeElement.classList.remove('tour-highlight');
+    activeElement = null;
+  };
+  const render = () => {
+    const step = steps[currentStep];
+    if (activeElement) activeElement.classList.remove('tour-highlight');
+    activeElement = step.element;
+    activeElement.classList.add('tour-highlight');
+    activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    title.textContent = step.title;
+    text.textContent = step.text;
+    progress.textContent = `${currentStep + 1} of ${steps.length}`;
+    back.disabled = currentStep === 0;
+    next.textContent = currentStep === steps.length - 1 ? 'Finish' : 'Next';
+    requestAnimationFrame(() => card.classList.add('is-visible'));
+  };
+  const start = () => {
+    currentStep = 0;
+    card.hidden = false;
+    backdrop.hidden = false;
+    document.body.classList.add('tour-is-open');
+    render();
+    next.focus();
+  };
+  launch.addEventListener('click', start);
+  next.addEventListener('click', () => currentStep === steps.length - 1 ? finish() : (currentStep += 1, render()));
+  back.addEventListener('click', () => { if (currentStep > 0) { currentStep -= 1; render(); } });
+  tour.querySelector('.tour-skip').addEventListener('click', finish);
+  tour.querySelector('.tour-close').addEventListener('click', finish);
+  backdrop.addEventListener('click', finish);
+  card.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') finish();
+    if (event.key === 'ArrowRight') next.click();
+    if (event.key === 'ArrowLeft') back.click();
+  });
+  if (!localStorage.getItem(tourStorageKey)) window.setTimeout(start, 700);
+})();
+
