@@ -147,6 +147,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .contact-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; align-items: start; }
 .contact-info { grid-column: 2; grid-row: 1; }
+.contact-intro { display: block; }
 .contact-info h2 { margin: 0 0 18px; font: 700 clamp(2.2rem, 4vw, 4rem)/1.05 var(--display); letter-spacing: -.045em; }
 .contact-info > p { color: var(--muted); }
 .contact-cta { display: grid; gap: 12px; margin-top: 28px; }
@@ -241,8 +242,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .trust-item strong { font-size: .78rem; }
   .trust-item span { font-size: .68rem; }
   .split, .contact-layout, .cta-band .split { grid-template-columns: 1fr; }
-  .contact-layout .form-card { grid-column: 1; grid-row: 1; }
-  .contact-info { grid-column: 1; grid-row: 2; }
+  .contact-info { display: contents; }
+  .contact-intro { grid-column: 1; grid-row: 1; }
+  .contact-layout .form-card { grid-column: 1; grid-row: 2; }
+  .contact-cta { grid-column: 1; grid-row: 3; }
+  .contact-details { grid-column: 1; grid-row: 4; }
   .visual-panel { min-height: 310px; }
   .service-grid, .pricing-grid, .portfolio-grid, .value-grid { grid-template-columns: 1fr; }
   .price-card-copy { min-height: 0; }
