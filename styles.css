@@ -49,7 +49,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .brand-mark { display: grid; width: 34px; height: 34px; place-items: center; color: var(--navy-950); background: var(--cyan); border-radius: 9px; font-size: .9rem; }
 .brand-logo { display: block; width: 150px; height: auto; padding: 0; border-radius: 0; background: transparent; filter: drop-shadow(0 8px 15px rgba(0,0,0,.14)); }
 .site-header .brand-logo { width: 72px; }
-.homepage-logo { margin-bottom: 30px; }
+.homepage-header .nav { min-height: 132px; height: auto; }
+.homepage-logo { margin: 30px 0; }
 .brand-logo-small { width: 120px; }
 .brand-wordmark { display: none; }
 .nav-links { display: flex; align-items: center; gap: 26px; color: rgba(255,255,255,.78); font-size: .92rem; font-weight: 700; }
@@ -212,6 +213,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .section { padding: 78px 0; }
   .section-sm { padding: 50px 0; }
   .nav { height: 74px; }
+  .homepage-header .nav { min-height: 118px; }
   .brand { font-size: .9rem; }
   .brand-mark { width: 31px; height: 31px; }
   .site-header .brand-logo { width: 58px; }
